@@ -1,5 +1,5 @@
 Template.items.items = function() {
-	return Items.find();
+	return Items.find({},{$sort: {submitted: 1}});
 }
 
 Template.items.events({

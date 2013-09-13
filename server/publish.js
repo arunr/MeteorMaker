@@ -1,5 +1,5 @@
 Meteor.publish('items', function() {
-    return Items.find({approved: true},{sort: {submitted: -1}});
+    return Items.find({approved: true},{sort: {submitted: 1}});
 });
 
 Accounts.onCreateUser(function(options, user) {

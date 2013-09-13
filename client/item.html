@@ -1,0 +1,39 @@
+<template name="item">
+    <div class="thumbnail seen-{{viewed}}">
+        <div class="row-fluid">
+            <h3>
+                {{#if viewed}} {{title}}
+                <input class="checkbox span3 pull-right" type="checkbox" checked></input>
+
+                {{else}}
+                <input class="checkbox span3 pull-right" type="checkbox">{{title}}</input>
+                <hr/>{{/if}}
+            </h3>
+        </div>
+        <div class="contents-{{viewed}}">
+            <div class="row-fluid">
+                <h3>Code</h3>
+                <div class="code">
+                    {{{code}}}
+                </div>
+            </div>
+            <div class="row-fluid">
+                <h3>Notes</h3>
+                <div class="notes">
+                    {{{notes}}}
+                </div>
+            </div>
+            <hr/>
+            <div class="row-fluid">
+                <footer class="span6">
+                    <strong>Added: </strong>{{getDate}}
+                </footer>
+                <div class="span6">
+                <footer class="pull-right">
+                    <strong>Authored By:</strong><a href="{{currentUser.services.facebook.link}}">{{author}}</a>
+                </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

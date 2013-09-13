@@ -1,0 +1,37 @@
+<template name="items">
+    {{#if currentUser}}
+    <button id="new_post" class="btn btn-success btn-large">Create a new snippet</button>
+    <div class="create">
+        <form>
+            <fieldset>
+                <h2>Create an new snippet</h2>
+                <label>Title</label>
+                <input type="text" name="title" class="span8 agenda" placeholder="Type something…">
+                <span class="label label-info">Enter a unique title</span>
+                <label>Code</label>
+                <textarea name="code" class="span8 agenda" placeholder="Enter your code here. You can use Markdown!" rows="5"></textarea>
+                <span class="label label-info">Wrapped in a &lt;pre&gt; block!</span>                
+                <label>Notes</label>
+                <textarea name="notes" class="span8 agenda" placeholder="Enter your notes here. You can use Markdown!" rows="5"></textarea>
+                <div>
+                    <button type="submit" class="btn btn-info agenda">Create</button>
+                    <button id="hide_post" class="btn btn-inverse agenda">Hide</button>
+                    <div id="message"></div>
+                </div>
+            </fieldset>
+        </form>
+        <hr/>
+    </div>
+    {{else}}
+        <div class="alert alert-info text-center">Sign-in to add new snippets, and save your progress!</div>
+    {{/if}}
+
+    <h2>Meteor Snippets</h2>
+    <ul class="thumbnails">
+        <li class="span12">
+            {{#each items}} {{> item}} {{/each}}
+
+        </li>
+    </ul>
+
+</template>

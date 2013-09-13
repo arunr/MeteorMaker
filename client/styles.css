@@ -1,0 +1,121 @@
+@font-face {
+    font-family:'harabararegular';
+    src: url('/Harabara.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'agenda';
+	src: url('/Agenda-Medium.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'anonpro';
+	src: url('/anonpro.ttf') format('truetype');
+}
+
+body {
+	background-image: url('/geometry.png');
+	background-repeat: true;
+}
+
+h1 {
+	font-family: 'harabararegular';
+	font-size: 46px;
+	letter-spacing: .2em;
+}
+
+h2 {
+	font-family: 'harabararegular';
+	font-size: 24px;
+	letter-spacing: .2em;
+}
+.btn, .agenda {
+	font-family: 'agenda';
+}
+
+body {
+	font-family: 'agenda';
+	letter-spacing: .1em;
+}
+
+.seen-true {
+	background-color: #DCDCDC;
+}
+
+.seen-true h3 {
+	text-decoration: line-through;
+}
+
+.seen-false {
+	background-color: #98FB98;
+
+}
+
+.contents-true {
+	display: none;
+}
+
+.create {
+	display: none;
+}
+
+.error {
+	color: red;
+}
+
+.success {
+	color: green;
+}
+
+.thumbnail {
+	padding: 20px;
+	margin-top: 20px;
+	border-radius: 5px;
+	border-color: #668B8B;
+	border-width: 3px;
+}
+
+#login-buttons-image-facebook {
+	margin-top: 15px;
+	padding: 10px;
+	background-repeat: no-repeat;
+	float: top;
+	display: inline;
+}
+
+.single-login-button {
+	margin-top: 15px;
+	padding: 10px;
+	border: black;
+	background-color: black;
+	color: white;
+	border-radius: 5px;
+	font-size: larger;
+	float: right;
+	display: inline;
+}
+
+.single-login-button:hover {
+	color: green;
+}
+
+.login-display-name {
+	text-align: center;
+	color: orange;
+	font-size: larger;
+	font-weight: bold;
+}
+
+.code * {
+	font-family:anonpro;
+}
+
+label {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0%;	
+}

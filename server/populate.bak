@@ -1,0 +1,8 @@
+if (Items.find().count() === 0) {
+	Items.insert({'title':'Install Meteor', 'code':'<pre>curl https://</pre>', approved:true});
+	Items.insert({'title':'Create your first app', 'code':'<pre>curl https://</pre>'});
+	Items.insert({'title':'Learn about collections', 'code':'<pre>curl https://</pre>', approved: true});
+
+}
+
+Meteor.users.allow({update: function () { return true; }});
